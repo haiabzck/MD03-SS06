@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class Exercise1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int diem;
+        float diem;
         int tongSoSinhVien = 0;
-        int tongDiem = 0;
+        float tongDiem = 0;
         int svDat = 0;
         int svTruot = 0;
         int svXuatSac = 0;
         int svGioi = 0;
-        int diemCaoNhat = Integer.MIN_VALUE;
-        int diemThapNhat = Integer.MAX_VALUE;
-        int[] arr = new int[10000];
+        float diemCaoNhat = Integer.MIN_VALUE;
+        float diemThapNhat = Integer.MAX_VALUE;
+        float[] arr = new float[10000];
         int size = 0;
         while (true) {
             System.out.println(" ");
@@ -31,10 +31,9 @@ public class Exercise1 {
                     """);
             System.out.print("Lựa chọn của bạn: ");
 
-            // Kiểm tra dữ liệu đầu vào của menu để tránh lỗi crash chương trình
             if (!scanner.hasNextInt()) {
                 System.out.println("Cảnh báo: Vui lòng chỉ nhập số từ 1 đến 8!");
-                scanner.next(); // Đọc bỏ giá trị sai
+                scanner.next();
                 continue;
             }
             int luaChon = Integer.parseInt(scanner.nextLine());
@@ -50,7 +49,7 @@ public class Exercise1 {
                     diem = Integer.parseInt((scanner.nextLine()));
                     tongSoSinhVien++;
                     tongDiem +=diem;
-                    // Kiểm tra khoảng điểm hợp lệ
+
                     if (diem < 0 || diem > 10) {
                         System.out.println("Cảnh báo: Điểm phải nằm trong khoảng từ 0 đến 10 ");
                         continue;
@@ -100,7 +99,7 @@ public class Exercise1 {
                     }
                     break;
                 case 3:
-                    int diemTB = tongDiem / tongSoSinhVien;
+                    float diemTB = tongDiem / tongSoSinhVien;
                     System.out.println("Điểm trung bình của các sinh viên là : "+diemTB);
                     break;
                 case 4:
@@ -119,7 +118,7 @@ public class Exercise1 {
                                 minIndex = j;
                             }
                         }
-                        int temp = arr[minIndex];
+                        float temp = arr[minIndex];
                         arr[minIndex] = arr[i];
                         arr[i] =  temp;
                     }
