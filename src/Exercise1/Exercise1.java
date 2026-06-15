@@ -12,8 +12,8 @@ public class Exercise1 {
         int svTruot = 0;
         int svXuatSac = 0;
         int svGioi = 0;
-        float diemCaoNhat = Integer.MIN_VALUE;
-        float diemThapNhat = Integer.MAX_VALUE;
+        float diemCaoNhat = Float.MIN_VALUE;
+        float diemThapNhat = Float.MAX_VALUE;
         float[] arr = new float[10000];
         int size = 0;
         while (true) {
