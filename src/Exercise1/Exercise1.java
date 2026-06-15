@@ -46,7 +46,7 @@ public class Exercise1 {
                         scanner.next();
                         continue;
                     }
-                    diem = Integer.parseInt((scanner.nextLine()));
+                    diem = Float.parseFloat(scanner.nextLine());
                     tongSoSinhVien++;
                     tongDiem +=diem;
 
